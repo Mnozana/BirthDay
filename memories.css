@@ -1,0 +1,350 @@
+/* memories.css - Styles for memories page */
+
+body {
+    background: var(--light-gradient);
+}
+
+/* Header specific styles */
+.memories-header {
+    padding: 40px 0 20px;
+}
+
+.memories-header h1 {
+    animation: pulse 2s infinite alternate;
+}
+
+/* Memory Gallery */
+.memory-gallery {
+    margin-bottom: 80px;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.memory-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.memory-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.memory-image img,
+.memory-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.memory-card:hover .memory-image img,
+.memory-card:hover .memory-video video {
+    transform: scale(1.1);
+}
+
+/* Video specific styles */
+.memory-video {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    opacity: 0.8;
+    z-index: 2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.memory-video video {
+    position: relative;
+    z-index: 1;
+}
+
+.memory-content {
+    padding: 30px;
+}
+
+.memory-content h3 {
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.memory-content h3:after {
+    display: none;
+}
+
+.memory-date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.memory-date i {
+    font-size: 1.2rem;
+}
+
+.memory-description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.memory-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.memory-tag {
+    background: var(--light-blue);
+    color: var(--primary);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.memory-card:hover .memory-tag {
+    background: var(--primary);
+    color: white;
+}
+
+/* Memory upload section */
+.memory-upload {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    border: 3px dashed var(--primary);
+}
+
+.memory-upload h3 {
+    margin-bottom: 15px;
+}
+
+.memory-upload > p {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.upload-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.upload-form textarea {
+    min-height: 150px;
+    margin-bottom: 25px;
+}
+
+/* Full Screen Overlay Styles */
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fullscreen-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.fullscreen-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.fullscreen-image {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.fullscreen-video {
+    width: 800px;
+    max-width: 90vw;
+    max-height: 90vh;
+    background: black;
+}
+
+.close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.close-overlay:hover {
+    background: rgba(231, 76, 60, 0.9);
+    transform: scale(1.1);
+}
+
+.overlay-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 30px 20px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Expanded memory card */
+.memory-card.expanded {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.memory-card.expanded .memory-description {
+    max-height: none;
+    overflow: visible;
+}
+
+/* Responsive adjustments for memories page */
+@media (max-width: 992px) {
+    .memory-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .memory-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .memory-image,
+    .memory-video {
+        height: 200px;
+    }
+    
+    .memory-content {
+        padding: 25px;
+    }
+    
+    .memory-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .memory-upload {
+        padding: 40px 30px;
+    }
+    
+    .video-icon {
+        font-size: 2.5rem;
+    }
+    
+    .fullscreen-video {
+        width: 95vw;
+    }
+    
+    .overlay-title {
+        font-size: 1.2rem;
+        padding: 20px 15px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .memory-content {
+        padding: 20px;
+    }
+    
+    .memory-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .memory-description {
+        font-size: 1rem;
+    }
+    
+    .memory-upload {
+        padding: 30px 20px;
+    }
+    
+    .memory-upload h3 {
+        font-size: 2rem;
+    }
+    
+    .video-icon {
+        font-size: 2rem;
+    }
+    
+    .close-overlay {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .overlay-title {
+        font-size: 1rem;
+        padding: 15px 10px 10px;
+    }
+}

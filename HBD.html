@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday My Love!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --secondary: #2ecc71;
+            --accent: #9b59b6;
+            --light: #f8fafc;
+            --light-blue: #e8f4fc;
+            --dark: #2c3e50;
+            --blue-gradient: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            --light-gradient: linear-gradient(135deg, #e8f4fc 0%, #f8fafc 100%);
+            --gold: #ffd700;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light-gradient);
+            color: var(--dark);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Login Page Styles */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background: var(--blue-gradient);
+            position: relative;
+        }
+
+        .login-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .login-box {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+            z-index: 10;
+            position: relative;
+            border: 3px solid var(--primary);
+        }
+
+        .login-icon {
+            font-size: 5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .login-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .login-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .birthday-input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .birthday-input-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .birthday-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            background: var(--light);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .birthday-input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .hint {
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hint i {
+            color: var(--primary);
+        }
+
+        .login-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.5);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .login-btn:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .login-btn:hover:after {
+            left: 100%;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffeaea;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .countdown {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: #666;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px dashed #3498db;
+        }
+
+        .countdown-number {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.5rem;
+            background: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 0 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Content Styles (hidden until login) */
+        .main-content {
+            display: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 30px;
+            position: relative;
+            background: linear-gradient(to bottom, rgba(52, 152, 219, 0.1), transparent);
+            border-radius: 0 0 40px 40px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 0 rgba(52, 152, 219, 0.15);
+            animation: pulse 2s infinite alternate;
+            position: relative;
+            display: inline-block;
+        }
+
+        .age-badge {
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            background: var(--gold);
+            color: #2c3e50;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.8rem;
+            transform: rotate(15deg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border: 3px solid white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 30px;
+            font-weight: 700;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .birthday-person {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin: 0 auto 50px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 15px solid white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-frame {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border-radius: 50%;
+            border: 8px solid var(--primary);
+            z-index: 1;
+            animation: rotate 25s linear infinite;
+            background: conic-gradient(from 0deg, var(--primary), var(--accent), var(--secondary), var(--primary));
+        }
+
+        .birthday-badge {
+            position: absolute;
+            top: 30px;
+            right: -20px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            transform: rotate(15deg);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border: 3px solid white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .message-box {
+            background: white;
+            border-radius: 25px;
+            padding: 60px 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto 70px;
+            position: relative;
+            border-left: 8px solid var(--primary);
+            border-right: 8px solid var(--primary);
+            overflow: hidden;
+        }
+
+        .message-box:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(to right, var(--primary), var(--accent), var(--secondary));
+        }
+
+        .personal-message {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 700;
+            background: rgba(52, 152, 219, 0.1);
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+
+        .message-signature {
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-top: 40px;
+            position: relative;
+            display: inline-block;
+            right: 0;
+        }
+
+        .message-signature:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            right: 110%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--accent));
+        }
+
+        .interactive-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .interactive-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .interactive-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 20px 20px 0 0;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+
+        .card-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .card-content {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover:after {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.4);
+        }
+
+        .memory-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .memory-item {
+            height: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .memory-item:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            z-index: 5;
+        }
+
+        .memory-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .memory-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .memory-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(44, 62, 80, 0.9);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .memory-item:hover .memory-caption {
+            transform: translateY(0);
+        }
+
+        .birthday-wish-form {
+            background: white;
+            border-radius: 25px;
+            padding: 60px 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 0 auto 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .birthday-wish-form:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1.2rem;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            resize: vertical;
+            min-height: 180px;
+            transition: all 0.3s ease;
+            background: var(--light);
+        }
+
+        textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .confetti {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary);
+            top: -10px;
+            opacity: 0;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 3px dashed var(--primary);
+            margin-top: 50px;
+            color: #666;
+            background: white;
+            border-radius: 40px 40px 0 0;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .heart {
+            color: #e74c3c;
+            animation: heartbeat 1.2s infinite;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .logout-btn {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary);
+            border: 3px solid var(--primary);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            font-size: 1.1rem;
+        }
+
+        .logout-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .number-20 {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), #ffed4e);
+            color: #2c3e50;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 2rem;
+            margin: 0 10px;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(52, 152, 219, 0.8); }
+        }
+
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .glowing {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 4.5rem;
+            }
+            
+            .age-badge {
+                top: -15px;
+                right: -20px;
+                font-size: 1.5rem;
+                padding: 10px 20px;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .login-box {
+                padding: 40px 30px;
+                max-width: 450px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.8rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 2.2rem;
+            }
+            
+            .birthday-person {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .interactive-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .memory-wall {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+            
+            .message-box, .birthday-wish-form {
+                padding: 40px 30px;
+            }
+            
+            .login-title {
+                font-size: 3rem;
+            }
+            
+            .login-icon {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .age-badge {
+                position: relative;
+                top: 0;
+                right: 0;
+                display: block;
+                margin: 0 auto 20px;
+                transform: rotate(0);
+                width: fit-content;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .message-box, .birthday-wish-form {
+                padding: 30px 20px;
+            }
+            
+            .login-title {
+                font-size: 2.5rem;
+            }
+            
+            .birthday-person {
+                width: 260px;
+                height: 260px;
+            }
+            
+            .profile-frame {
+                top: -15px;
+                left: -15px;
+                right: -15px;
+                bottom: -15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="login-container">
+        <div class="login-background"></div>
+        <div class="login-box">
+            <div class="login-icon">
+                <i class="fas fa-birthday-cake"></i>
+            </div>
+            <h1 class="login-title">Welcome to Your 20th Birthday!</h1>
+            <p class="login-subtitle">Enter your birth date and favorite color to unlock your special birthday surprise!</p>
+            
+            <div class="birthday-input-group">
+                <label for="birthdate"><i class="fas fa-calendar-alt"></i> Your Birth Date:</label>
+                <input type="date" id="birthdate" class="birthday-input" required>
+                <p class="hint"><i class="fas fa-lightbulb"></i> Hint: January 6th, 2006 - Your special day!</p>
+            </div>
+            
+            <div class="birthday-input-group">
+                <label for="secret-question"><i class="fas fa-palette"></i> What's your favorite color?</label>
+                <input type="text" id="secret-question" class="birthday-input" placeholder="Enter the color..." required>
+                <p class="hint"><i class="fas fa-lightbulb"></i> It's the color of the sky and the ocean 🌊</p>
+            </div>
+            
+            <button id="login-button" class="login-btn">
+                <i class="fas fa-unlock-alt"></i> Unlock Your 20th Birthday Surprise
+            </button>
+            
+            <div id="login-error" class="error-message">
+                <i class="fas fa-exclamation-triangle"></i> Oops! That's not the right birth date or favorite color. Try again!
+            </div>
+            
+            <div class="countdown">
+                <p>You have <span class="countdown-number" id="attempts-left">3</span> attempts to unlock your birthday surprise!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (hidden until login) -->
+    <div id="main-content" class="main-content">
+        <!-- Confetti container -->
+        <div id="confetti-container"></div>
+        
+        <!-- Logout Button -->
+        <button id="logout-button" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Exit Celebration
+        </button>
+
+        <div class="container">
+            <header>
+                <h1 class="floating">Happy 20th Birthday!</h1>
+                <div class="age-badge glowing">20!</div>
+                <h2>Welcome to a new decade of your life, my love! <span class="number-20">20</span> looks absolutely beautiful on you!</h2>
+            </header>
+
+            <section class="hero-section">
+                <div class="birthday-person">
+                    <div class="birthday-badge">20 TODAY!</div>
+                    <div class="profile-frame"></div>
+                    <!-- Replace with your girlfriend's photo -->
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="The Birthday Girl" class="profile-img">
+                </div>
+            </section>
+
+            <section class="message-box">
+                <div class="section-title">
+                    <h3>A Special 20th Birthday Message</h3>
+                </div>
+                <div class="personal-message">
+                    My dearest love, today marks an incredible milestone in your life - your <span class="highlight">20th birthday</span>! 
+                    Two whole decades of bringing light, laughter, and love into this world, and especially into my life.
+                    <br><br>
+                    I remember when we first met, you were just <span class="highlight">19</span>, and now you're stepping into your <span class="highlight">twenties</span> with 
+                    all the grace, intelligence, and beauty that makes you so uniquely you. Your <span class="highlight">blue eyes</span> (yes, your favorite color!) 
+                    still take my breath away every time I look into them.
+                    <br><br>
+                    This past year, I've watched you grow into an even more amazing person. You've tackled challenges with strength, 
+                    pursued your dreams with passion, and loved with your whole heart. As you enter this new decade, I want you to know 
+                    that I'll be right here beside you, cheering you on every step of the way.
+                    <br><br>
+                    Your 20s are going to be incredible - full of new adventures, discoveries, and achievements. And I can't wait to 
+                    experience them all with you. Thank you for being the most wonderful girlfriend anyone could ask for.
+                    <br><br>
+                    Here's to you, my love - to the incredible woman you are today and the even more amazing woman you're becoming.
+                </div>
+                <div class="message-signature">All my love always,<br>Your Boyfriend</div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <h3>Your 20th Birthday Surprises</h3>
+                </div>
+                <div class="interactive-section">
+                    <div class="interactive-card">
+                        <div class="card-icon">
+                            <i class="fas fa-gifts"></i>
+                        </div>
+                        <h4 class="card-title">20th Birthday Gift</h4>
+                        <p class="card-content">Open your special virtual gift for turning 20! A token of my love and appreciation for the amazing woman you've become.</p>
+                        <button id="gift-btn" class="btn">Open Your 20th Birthday Gift</button>
+                    </div>
+
+                    <div class="interactive-card">
+                        <div class="card-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4 class="card-title">20 Wishes for Your 20s</h4>
+                        <p class="card-content">Get 20 special wishes for your 20s! Each one is a hope, dream, or blessing for this new decade of your life.</p>
+                        <button id="wish-gen-btn" class="btn">Get 20 Wishes for Your 20s</button>
+                    </div>
+
+                    <div class="interactive-card">
+                        <div class="card-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4 class="card-title">20s Birthday Playlist</h4>
+                        <p class="card-content">Listen to a special "Welcome to Your 20s" birthday playlist! The perfect soundtrack for your special day.</p>
+                        <button id="music-btn" class="btn">Play Your Birthday Playlist</button>
+                        <audio id="birthday-song" src="https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3"></audio>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <h3>20 Beautiful Memories</h3>
+                    <p style="color: #666; margin-top: 10px;">Here are some of my favorite memories with you (one for each year of your life!)</p>
+                </div>
+                <div class="memory-wall">
+                    <!-- Replace these with your actual photos and captions -->
+                    <div class="memory-item">
+                        <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Memory 1">
+                        <div class="memory-caption">That amazing day at the beach</div>
+                    </div>
+                    <div class="memory-item">
+                        <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Memory 2">
+                        <div class="memory-caption">Our romantic dinner under the stars</div>
+                    </div>
+                    <div class="memory-item">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Memory 3">
+                        <div class="memory-caption">Your beautiful smile that lights up my world</div>
+                    </div>
+                    <div class="memory-item">
+                        <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Memory 4">
+                        <div class="memory-caption">Celebrating our first anniversary together</div>
+                    </div>
+                    <div class="memory-item">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Memory 5">
+                        <div class="memory-caption">That spontaneous road trip we took</div>
+                    </div>
+                    <div class="memory-item">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Memory 6">
+                        <div class="memory-caption">Our cozy movie nights together</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="birthday-wish-form">
+                <div class="section-title">
+                    <h3>Make Your 20th Birthday Wish</h3>
+                    <p style="color: #666; margin-top: 15px; margin-bottom: 30px;">This is a special year - make a wish for your 20s and I'll do everything I can to help make it come true!</p>
+                </div>
+                <div class="form-group">
+                    <label for="birthday-wish"><i class="fas fa-star"></i> Your 20th Birthday Wish:</label>
+                    <textarea id="birthday-wish" placeholder="What do you hope for in your 20s? What dreams do you want to chase? What adventures await? Write it all here..."></textarea>
+                </div>
+                <button id="wish-btn" class="btn">Make Your 20th Birthday Wish!</button>
+                <div id="wish-confirmation" style="display:none; margin-top: 25px; padding: 20px; background: #d4edda; color: #155724; border-radius: 12px; font-weight: 600; font-size: 1.1rem;">
+                    <i class="fas fa-check-circle"></i> Your 20th birthday wish has been saved and sent to the universe! 🌟
+                </div>
+            </section>
+
+            <footer>
+                <p style="font-size: 1.3rem; margin-bottom: 20px;">Made with <span class="heart">♥</span> for the most amazing 20-year-old in the world</p>
+                <p style="font-size: 1.2rem; margin-bottom: 15px; color: var(--primary); font-weight: 600;">Happy 20th Birthday my love! Welcome to your fabulous 20s!</p>
+                <p>May this decade bring you more joy, success, love, and adventure than you could ever imagine.</p>
+                <p style="margin-top: 30px; font-size: 0.9rem; color: #999;">© <span id="current-year"></span> Your Loving Boyfriend | January 6, 2006 - Forever</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Set the correct birthday and favorite color
+        const correctBirthdate = "2006-01-06"; // January 6, 2006
+        const correctColor = "blue";
+        let attemptsLeft = 3;
+        
+        // Set the maximum date to today for the date picker
+        const today = new Date();
+        const formattedToday = today.toISOString().split('T')[0];
+        document.getElementById('birthdate').setAttribute('max', formattedToday);
+        
+        // Login functionality
+        document.getElementById('login-button').addEventListener('click', function() {
+            const enteredBirthdate = document.getElementById('birthdate').value;
+            const enteredColor = document.getElementById('secret-question').value.toLowerCase().trim();
+            const errorMessage = document.getElementById('login-error');
+            
+            // Check if birthdate and color match
+            if (enteredBirthdate === correctBirthdate && enteredColor === correctColor) {
+                // Successful login
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+                createConfetti(200);
+                
+                // Show welcome message
+                setTimeout(() => {
+                    alert("🎉🎂 HAPPY 20th BIRTHDAY MY LOVE! 🎂🎉\n\nWelcome to your special birthday celebration! You're officially in your 20s and I couldn't be more excited to celebrate this milestone with you!");
+                }, 800);
+            } else {
+                // Failed login
+                attemptsLeft--;
+                document.getElementById('attempts-left').textContent = attemptsLeft;
+                
+                errorMessage.style.display = 'block';
+                errorMessage.style.animation = 'fadeIn 0.3s ease-out';
+                
+                // Shake animation for error
+                document.querySelector('.login-box').style.animation = 'none';
+                setTimeout(() => {
+                    document.querySelector('.login-box').style.animation = 'shake 0.5s ease-in-out';
+                }, 10);
+                
+                // Create red confetti for error
+                createErrorConfetti(30);
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                    document.querySelector('.login-box').style.animation = 'fadeIn 0.8s ease-out';
+                }, 3000);
+                
+                // If no attempts left
+                if (attemptsLeft <= 0) {
+                    this.disabled = true;
+                    this.innerHTML = '<i class="fas fa-lock"></i> Access Locked';
+                    this.style.background = "#95a5a6";
+                    errorMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Access locked! Please refresh the page and try again.';
+                    errorMessage.style.display = 'block';
+                }
+            }
+        });
+        
+        // Logout functionality
+        document.getElementById('logout-button').addEventListener('click', function() {
+            if (confirm("Are you sure you want to exit your 20th birthday celebration?")) {
+                document.getElementById('main-content').style.display = 'none';
+                document.getElementById('login-page').style.display = 'flex';
+                
+                // Reset login form
+                document.getElementById('birthdate').value = "";
+                document.getElementById('secret-question').value = "";
+                document.getElementById('login-button').disabled = false;
+                document.getElementById('login-button').innerHTML = '<i class="fas fa-unlock-alt"></i> Unlock Your 20th Birthday Surprise';
+                document.getElementById('login-button').style.background = "";
+                attemptsLeft = 3;
+                document.getElementById('attempts-left').textContent = attemptsLeft;
+                
+                createConfetti(30);
+            }
+        });
+        
+        // Gift button functionality
+        document.getElementById('gift-btn').addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-gift"></i> Gift Unlocked!';
+            this.style.background = "var(--secondary)";
+            createConfetti(100);
+            
+            // Show gift message
+            setTimeout(() => {
+                const gifts = [
+                    "My unconditional love for all your 20s and beyond ❤️",
+                    "A promise to support every dream you chase in your 20s 🌟",
+                    "Endless adventures and new experiences together 🗺️",
+                    "A lifetime of laughter, growth, and beautiful moments 😊",
+                    "All my attention and affection as you navigate your fabulous 20s 💖"
+                ];
+                const randomGift = gifts[Math.floor(Math.random() * gifts.length)];
+                
+                alert(`🎁 YOUR 20th BIRTHDAY GIFT 🎁\n\n${randomGift}\n\nPlus a real gift waiting for you in person!`);
+            }, 600);
+        });
+        
+        // Wish generator button - 20 wishes for her 20s
+        document.getElementById('wish-gen-btn').addEventListener('click', function() {
+            const wishes = [
+                "May your 20s be filled with incredible adventures and new discoveries!",
+                "Wishing you success in every dream you pursue this decade!",
+                "May you find happiness in both big moments and small everyday joys!",
+                "Here's to lifelong learning and personal growth in your 20s!",
+                "May you build meaningful friendships that last a lifetime!",
+                "Wishing you the courage to take risks and chase what sets your soul on fire!",
+                "May you discover new passions and talents you never knew you had!",
+                "Here's to good health, positive energy, and endless vitality!",
+                "May you travel to places that take your breath away and expand your horizons!",
+                "Wishing you financial stability and the freedom to live life on your terms!",
+                "May you find balance between work, play, and self-care!",
+                "Here's to falling in love with yourself and the amazing woman you're becoming!",
+                "May you have the confidence to speak your truth and stand up for what you believe!",
+                "Wishing you resilience to overcome any challenges that come your way!",
+                "May your 20s be a time of self-discovery and defining who you truly are!",
+                "Here's to creating memories that you'll cherish for the rest of your life!",
+                "May you find a career path that brings you fulfillment and purpose!",
+                "Wishing you the wisdom to make great decisions and learn from the not-so-great ones!",
+                "May you always have a strong support system cheering you on!",
+                "Here's to a decade of becoming the best version of yourself!"
+            ];
+            
+            // Show 5 random wishes at a time
+            let selectedWishes = [];
+            while (selectedWishes.length < 5) {
+                const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+                if (!selectedWishes.includes(randomWish)) {
+                    selectedWishes.push(randomWish);
+                }
+            }
+            
+            this.innerHTML = '<i class="fas fa-redo"></i> Get More Wishes';
+            createConfetti(50);
+            
+            // Show wishes in an alert
+            alert(`🌟 20 WISHES FOR YOUR 20s 🌟\n\n${selectedWishes.join('\n\n')}\n\n(That's 5 out of 20 wishes for your 20s! Click again for more!)`);
+        });
+        
+        // Music button functionality
+        const musicBtn = document.getElementById('music-btn');
+        const birthdaySong = document.getElementById('birthday-song');
+        let isPlaying = false;
+        
+        musicBtn.addEventListener('click', function() {
+            if (!isPlaying) {
+                birthdaySong.play();
+                this.innerHTML = '<i class="fas fa-pause"></i> Pause Birthday Music';
+                createConfetti(60);
+            } else {
+                birthdaySong.pause();
+                this.innerHTML = '<i class="fas fa-play"></i> Play Your Birthday Playlist';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Wish button functionality
+        document.getElementById('wish-btn').addEventListener('click', function() {
+            const wishText = document.getElementById('birthday-wish').value;
+            const confirmation = document.getElementById('wish-confirmation');
+            
+            if (wishText.trim() === "") {
+                alert("Please write your 20th birthday wish first! This is a special milestone worth celebrating with a special wish.");
+                return;
+            }
+            
+            // Save wish to localStorage
+            localStorage.setItem('20thBirthdayWish', wishText);
+            localStorage.setItem('wishDate', new Date().toISOString());
+            
+            this.innerHTML = '<i class="fas fa-check"></i> Wish Saved!';
+            this.style.background = "var(--secondary)";
+            
+            createConfetti(80);
+            
+            // Show confirmation
+            confirmation.style.display = 'block';
+            confirmation.style.animation = 'fadeIn 0.5s ease-out';
+            
+            // Auto-scroll to show confirmation
+            confirmation.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Reset after 8 seconds
+            setTimeout(() => {
+                this.innerHTML = 'Make Your 20th Birthday Wish!';
+                this.style.background = "";
+            }, 8000);
+        });
+        
+        // Confetti creation function
+        function createConfetti(count) {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#3498db', '#2980b9', '#2ecc71', '#9b59b6', '#1abc9c', '#f1c40f', '#e74c3c', '#e67e22'];
+            
+            for (let i = 0; i < count; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Random properties
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const size = Math.random() * 15 + 8;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 3 + 2;
+                
+                // Apply styles
+                confetti.style.backgroundColor = color;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.left = `${left}vw`;
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                // Add to container
+                container.appendChild(confetti);
+                
+                // Animate
+                const animation = confetti.animate([
+                    { top: '-10px', opacity: 1, transform: 'rotate(0deg)' },
+                    { top: '100vh', opacity: 0.7, transform: `rotate(${Math.random() * 720}deg)` }
+                ], {
+                    duration: animationDuration * 1000,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+                
+                // Remove after animation
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
+            }
+        }
+        
+        // Error confetti (red)
+        function createErrorConfetti(count) {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#e74c3c', '#c0392b', '#e67e22'];
+            
+            for (let i = 0; i < count; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Random properties
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const size = Math.random() * 10 + 5;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 2 + 1;
+                
+                // Apply styles
+                confetti.style.backgroundColor = color;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.left = `${left}vw`;
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                // Add to container
+                container.appendChild(confetti);
+                
+                // Animate
+                const animation = confetti.animate([
+                    { top: '-10px', opacity: 1, transform: 'rotate(0deg)' },
+                    { top: '50vh', opacity: 0.7, transform: `rotate(${Math.random() * 360}deg)` }
+                ], {
+                    duration: animationDuration * 1000,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+                
+                // Remove after animation
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
+            }
+        }
+        
+        // Add shake animation for login errors
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+                20%, 40%, 60%, 80% { transform: translateX(8px); }
+            }
+        `;
+        document.head.appendChild(styleSheet);
+        
+        // Make memory items interactive
+        const memoryItems = document.querySelectorAll('.memory-item');
+        memoryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.transform = 'scale(1.15)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.08)';
+                }, 400);
+            });
+        });
+        
+        // Add a surprise message when clicking the title
+        document.querySelector('h1').addEventListener('click', function() {
+            const messages = [
+                "20 never looked so good! You're absolutely stunning!",
+                "I'm so proud of the woman you're becoming in your 20s!",
+                "Your 20s are going to be your best decade yet, I just know it!",
+                "I fall more in love with you every day, especially now that you're 20!",
+                "You make 20 look absolutely incredible!"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            alert(`💙 20th BIRTHDAY SURPRISE 💙\n\n${randomMessage}`);
+            createConfetti(25);
+        });
+        
+        // Auto-create some confetti on successful login
+        setTimeout(() => {
+            if (document.getElementById('main-content').style.display === 'block') {
+                setInterval(() => {
+                    if (Math.random() > 0.7) {
+                        createConfetti(8);
+                    }
+                }, 4000);
+            }
+        }, 2000);
+        
+        // Check if there's a saved wish
+        window.addEventListener('load', function() {
+            const savedWish = localStorage.getItem('20thBirthdayWish');
+            if (savedWish) {
+                document.getElementById('birthday-wish').value = savedWish;
+            }
+        });
+    </script>
+</body>
+</html>

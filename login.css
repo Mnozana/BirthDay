@@ -1,0 +1,237 @@
+/* login.css - Styles for login page */
+
+body {
+    background: var(--blue-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+}
+
+.login-box {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+    z-index: 10;
+    position: relative;
+    border: 3px solid var(--primary);
+}
+
+.login-icon {
+    font-size: 5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.login-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.login-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.birthday-input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.birthday-input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.birthday-input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    background: var(--light);
+    font-family: 'Poppins', sans-serif;
+}
+
+.birthday-input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+    transform: translateY(-2px);
+}
+
+.hint {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hint i {
+    color: var(--primary);
+}
+
+.login-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(52, 152, 219, 0.5);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.login-btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.login-btn:hover:after {
+    left: 100%;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 20px;
+    padding: 15px;
+    background: #ffeaea;
+    border-radius: 10px;
+    display: none;
+    font-weight: 600;
+    border-left: 4px solid #e74c3c;
+}
+
+.countdown {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: #666;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dashed #3498db;
+}
+
+.countdown-number {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 1.5rem;
+    background: white;
+    padding: 5px 15px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for login page */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 40px 30px;
+        max-width: 450px;
+    }
+    
+    .login-title {
+        font-size: 3rem;
+    }
+    
+    .login-icon {
+        font-size: 4rem;
+    }
+    
+    .login-btn {
+        padding: 16px 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+    
+    .login-title {
+        font-size: 2.5rem;
+    }
+    
+    .login-subtitle {
+        font-size: 1rem;
+    }
+    
+    .birthday-input {
+        padding: 14px 16px;
+        font-size: 1.1rem;
+    }
+    
+    .login-btn {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+    }
+}

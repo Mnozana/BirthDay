@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories - 20th Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="memories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Confetti container -->
+    <div id="confetti-container"></div>
+    
+    <!-- Full Screen Overlay -->
+    <div id="fullscreen-overlay" class="fullscreen-overlay">
+        <button class="close-overlay">
+            <i class="fas fa-times"></i>
+        </button>
+        <div id="fullscreen-content" class="fullscreen-content">
+            <!-- Content will be dynamically inserted here -->
+        </div>
+        <div id="overlay-title" class="overlay-title"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-birthday-cake"></i>
+                <span>20th Birthday</span>
+            </div>
+            <div class="nav-links">
+                <a href="main.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="memories.html" class="nav-link active"><i class="fas fa-images"></i> Memories</a>
+                <a href="wishes.html" class="nav-link"><i class="fas fa-star"></i> Wishes</a>
+                <button id="logout-button" class="nav-logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="memories-header">
+            <h1>Our Beautiful Memories</h1>
+            <h2>20 special moments from our journey together (one for each year of your life!)</h2>
+            <div class="back-home">
+                <a href="main.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </header>
+
+        <section class="memory-gallery">
+            <div class="memory-grid">
+                <!-- Memory 1 - Image -->
+                <div class="memory-card" data-type="image" data-src="images/togg.jpeg" data-title="That Amazing Night Of the Res Event">
+                    <div class="memory-image">
+                        <img src="images/togg.jpeg" alt="Beach Day">
+                    </div>
+                    <div class="memory-content">
+                        <h3>That Amazing Night Of the Res Event</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 4 October 2025
+                        </div>
+                        <p class="memory-description">
+                            I still smile when i think of the day of our res event because thats the day i got to see the drunk version of you. You were so funny, cute, and more lovable. I love that day.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Drunk</span>
+                            <span class="memory-tag">Fun</span>
+                            <span class="memory-tag">Event</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 2 - Image -->
+                <div class="memory-card" data-type="image" data-src="images/Date1.jpeg" data-title="Our First Date Of Many">
+                    <div class="memory-image">
+                        <img src="images/Date1.jpeg" alt="Romantic Dinner">
+                    </div>
+                    <div class="memory-content">
+                        <h3>Our First Date Of Many</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 22 September 2025
+                        </div>
+                        <p class="memory-description">
+                           I keep thinking about our first date and how easy everything felt with you. From that moment i knew you were special to me. I'm really grateful for that day and for you.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Date</span>
+                            <span class="memory-tag">Love</span>
+                            <span class="memory-tag">Dinner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 3 - Image -->
+                <div class="memory-card" data-type="image" data-src="images/smile.jpeg" data-title="Your Beautiful Smile">
+                    <div class="memory-image">
+                        <img src="images/smile.jpeg" alt="Beautiful Smile">
+                    </div>
+                    <div class="memory-content">
+                        <h3>Your Beautiful Smile</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> Always
+                        </div>
+                        <p class="memory-description">
+                            This photo captures your smile perfectly - the one that lights up my world every single day. No matter what's happening, your smile makes everything better.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Smile</span>
+                            <span class="memory-tag">Beautiful</span>
+                            <span class="memory-tag">Love</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 4 - Image -->
+                <div class="memory-card" data-type="image" data-src="images/dress.jpeg" data-title="You in my favorite dress">
+                    <div class="memory-image">
+                        <img src="images/dress.jpeg" alt="First Anniversary">
+                    </div>
+                    <div class="memory-content">
+                        <h3>You in my favorite dress</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 28 October 2025
+                        </div>
+                        <p class="memory-description">
+                           You in my favourite dress? i wouldn't mind staring at you the whole day. I can't get the look of your beautiful body out of my mind. Please put it on more.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Dress</span>
+                            <span class="memory-tag">Beautiful</span>
+                            <span class="memory-tag">Favorite</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 5 - Image -->
+                <div class="memory-card" data-type="image" data-src="images/getaway.jpeg" data-title="Our Little Getaway">
+                    <div class="memory-image">
+                        <img src="images/getaway.jpeg" alt="Road Trip">
+                    </div>
+                    <div class="memory-content">
+                        <h3>Our Little Getaway</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 23 October 2025
+                        </div>
+                        <p class="memory-description">
+                            This was the day we went on a little getaway to spend the night together , away from everyone. Being close to you like that made everything feel so perfect. I would do it again anytime of anyday.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Night away</span>
+                            <span class="memory-tag">Together</span>
+                            <span class="memory-tag">Fun</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 6 - Image -->
+                <div class="memory-card" data-type="image" data-src="images/luck.jpeg" data-title="The Luckiest T-Shirt Ever">
+                    <div class="memory-image">
+                        <img src="images/luck.jpeg" alt="Movie Nights">
+                    </div>
+                    <div class="memory-content">
+                        <h3>The Luckiest T-Shirt Ever</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> Always
+                        </div>
+                        <p class="memory-description">
+                            My T-Shirt was the luckiest on this day, you made it look so amazing. But everyone knows that you are cuter than anything else. I can not get this picture out of my head.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Lucky</span>
+                            <span class="memory-tag">T-Shirt</span>
+                            <span class="memory-tag">Love</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 7 - Image -->
+                <div class="memory-card" data-type="image" data-src="images/skin.jpeg" data-title="Your Skin care Routine">
+                    <div class="memory-image">
+                        <img src="images/skin.jpeg" alt="Birthday Celebration">
+                    </div>
+                    <div class="memory-content">
+                        <h3>Your Skin care Routine</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 21 October 2025
+                        </div>
+                        <p class="memory-description">
+                            I still cant get over how cute you look in this picture doing your skin care nton nton, Not to mention your Beautiful eyes. It's the little moments like this that make me fall for you even more. You are always beautiful.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Skin care</span>
+                            <span class="memory-tag">Beautiful</span>
+                            <span class="memory-tag">Eyes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 8 - Video 1 -->
+                <div class="memory-card" data-type="video" data-src="images/swim.mp4" data-title="Our Amazing Night At The Pool">
+                    <div class="memory-video">
+                        <video muted loop>
+                            <source src="images/swim.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="memory-content">
+                        <h3>Our Amazing Night At The Pool</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 22 September 2025
+                        </div>
+                        <p class="memory-description">
+                            I still smile when i think about the night we went swimming. The water was so cold and i thought i was gonna die but being with you just made everything feel warm and perfect. That night is one of my favourite memories with you.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Swimming</span>
+                            <span class="memory-tag">Relaxing</span>
+                            <span class="memory-tag">Night</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 9 - Video 2 -->
+                <div class="memory-card" data-type="video" data-src="images/Date.mp4" data-title="Our First date">
+                    <div class="memory-video">
+                        <video muted loop>
+                            <source src="images/Date.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="memory-content">
+                        <h3>Our First date</h3>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 13 September 2025
+                        </div>
+                        <p class="memory-description">
+                            This a cute random video we took on our date. I was so happy on this day, i got to spend time with you no interruptions just the two of us. I'm really at peace when im with you.
+                        </p>
+                        <div class="memory-tags">
+                            <span class="memory-tag">Date</span>
+                            <span class="memory-tag">Night</span>
+                            <span class="memory-tag">Food</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="memory-upload">
+                <h3>Add Your Own Memory</h3>
+                <p>What's your favorite memory of us? Write it down and save it here!</p>
+                <div class="upload-form">
+                    <textarea id="new-memory" placeholder="Write about your favorite memory of us..."></textarea>
+                    <button id="save-memory-btn" class="btn">
+                        <i class="fas fa-save"></i> Save This Memory
+                    </button>
+                    <div id="memory-confirmation" class="confirmation-message"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p style="font-size: 1.3rem; margin-bottom: 20px;">Our memories are the treasures I hold closest to my heart</p>
+            <div class="footer-nav">
+                <a href="main.html">Home</a> | 
+                <a href="memories.html">Memories</a> | 
+                <a href="wishes.html">Wishes</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.9rem; color: #999;">© <span id="current-year"></span> Sanelisiwe | January 6, 2006 - Forever</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Memories page specific JavaScript
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Check authentication
+        if (!localStorage.getItem('birthdayAuthenticated')) {
+            window.location.href = 'index.html';
+        }
+        
+        // Logout functionality
+        document.getElementById('logout-button').addEventListener('click', function() {
+            if (confirm("Are you sure you want to logout from your birthday celebration?")) {
+                localStorage.removeItem('birthdayAuthenticated');
+                window.location.href = 'index.html';
+            }
+        });
+        
+        // Save memory functionality
+        document.getElementById('save-memory-btn').addEventListener('click', function() {
+            const memoryText = document.getElementById('new-memory').value;
+            const confirmation = document.getElementById('memory-confirmation');
+            
+            if (memoryText.trim() === "") {
+                confirmation.textContent = "Please write a memory first!";
+                confirmation.style.backgroundColor = "#ffeaea";
+                confirmation.style.color = "#e74c3c";
+                confirmation.style.display = "block";
+                return;
+            }
+            
+            // Save to localStorage
+            const memories = JSON.parse(localStorage.getItem('userMemories') || '[]');
+            memories.push({
+                text: memoryText,
+                date: new Date().toLocaleDateString(),
+                id: Date.now()
+            });
+            localStorage.setItem('userMemories', JSON.stringify(memories));
+            
+            // Show confirmation
+            confirmation.innerHTML = '<i class="fas fa-check-circle"></i> Memory saved successfully!';
+            confirmation.style.backgroundColor = "#d4edda";
+            confirmation.style.color = "#155724";
+            confirmation.style.display = "block";
+            
+            // Clear textarea
+            document.getElementById('new-memory').value = "";
+            
+            // Create confetti
+            createConfetti(30);
+            
+            // Hide confirmation after 5 seconds
+            setTimeout(() => {
+                confirmation.style.display = "none";
+            }, 5000);
+        });
+        
+        // Full screen overlay functionality
+        const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+        const fullscreenContent = document.getElementById('fullscreen-content');
+        const overlayTitle = document.getElementById('overlay-title');
+        const closeOverlayBtn = document.querySelector('.close-overlay');
+        let activeVideo = null;
+        
+        // Function to show image/video in full screen
+        function showFullscreen(element) {
+            const type = element.getAttribute('data-type');
+            const src = element.getAttribute('data-src');
+            const title = element.getAttribute('data-title');
+            
+            // Clear previous content
+            fullscreenContent.innerHTML = '';
+            
+            if (type === 'image') {
+                // Create image element
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = title;
+                img.className = 'fullscreen-image';
+                fullscreenContent.appendChild(img);
+            } else if (type === 'video') {
+                // Create video element (always muted)
+                const video = document.createElement('video');
+                video.src = src;
+                video.className = 'fullscreen-video';
+                video.controls = true;
+                video.autoplay = true;
+                video.loop = true;
+                video.muted = true; // Always muted
+                
+                // Create source element
+                const source = document.createElement('source');
+                source.src = src;
+                source.type = 'video/mp4';
+                
+                video.appendChild(source);
+                fullscreenContent.appendChild(video);
+                
+                // Store active video
+                activeVideo = video;
+            }
+            
+            // Set title
+            overlayTitle.textContent = title;
+            
+            // Show overlay
+            fullscreenOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Create confetti
+            createConfetti(15);
+        }
+        
+        // Function to close full screen
+        function closeFullscreen() {
+            fullscreenOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Pause and reset video if playing
+            if (activeVideo) {
+                activeVideo.pause();
+                activeVideo.currentTime = 0;
+                activeVideo = null;
+            }
+        }
+        
+        // Memory card click handlers
+        document.querySelectorAll('.memory-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Don't trigger if clicking on the expanded text
+                if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON') {
+                    return;
+                }
+                
+                showFullscreen(this);
+            });
+        });
+        
+        // Close overlay when close button is clicked
+        closeOverlayBtn.addEventListener('click', closeFullscreen);
+        
+        // Close overlay when clicking outside content
+        fullscreenOverlay.addEventListener('click', function(e) {
+            if (e.target === fullscreenOverlay) {
+                closeFullscreen();
+            }
+        });
+        
+        // Close overlay with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && fullscreenOverlay.classList.contains('active')) {
+                closeFullscreen();
+            }
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-container')) {
+                navLinks.classList.remove('show');
+            }
+        });
+        
+        // Navigation active state
+        const currentPage = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        
+        // Random confetti
+        setInterval(() => {
+            if (Math.random() > 0.8) {
+                createConfetti(5);
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

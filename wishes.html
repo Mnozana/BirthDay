@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes - 20th Birthday</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="wishes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Confetti container -->
+    <div id="confetti-container"></div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-birthday-cake"></i>
+                <span>20th Birthday</span>
+            </div>
+            <div class="nav-links">
+                <a href="main.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="memories.html" class="nav-link"><i class="fas fa-images"></i> Memories</a>
+                <a href="wishes.html" class="nav-link active"><i class="fas fa-star"></i> Wishes</a>
+                <button id="logout-button" class="nav-logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="wishes-header">
+            <h1>20 Wishes for Your 20s</h1>
+            <h2>Special wishes, dreams, and blessings for your new decade</h2>
+            <div class="back-home">
+                <a href="main.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </header>
+
+        <section class="wish-generator">
+            <div class="wish-card">
+                <div class="wish-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>Generate a Special Wish</h3>
+                <p>Click the button below to receive a unique birthday wish for your 20s!</p>
+                <button id="generate-wish-btn" class="btn wish-btn">
+                    <i class="fas fa-wand-magic-sparkles"></i> Get a Birthday Wish
+                </button>
+                <div id="wish-display" class="wish-display">
+                    <p id="wish-text">Your wish will appear here...</p>
+                </div>
+                <button id="save-wish-btn" class="btn secondary-btn" style="display: none;">
+                    <i class="fas fa-save"></i> Save This Wish
+                </button>
+            </div>
+        </section>
+
+        <section class="wish-list-section">
+            <div class="section-title">
+                <h3>20 Wishes for Your 20s</h3>
+                <p>Here are 20 special wishes for your new decade</p>
+            </div>
+            
+            <div class="wish-list">
+                <div class="wish-item">
+                    <div class="wish-number">1</div>
+                    <div class="wish-content">
+                        <h4>May you discover new passions</h4>
+                        <p>May your 20s be a time of exploration and discovering what truly sets your soul on fire.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">2</div>
+                    <div class="wish-content">
+                        <h4>May you travel and explore</h4>
+                        <p>May you visit new places, experience different cultures, and collect memories around the world.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">3</div>
+                    <div class="wish-content">
+                        <h4>May you find fulfilling work</h4>
+                        <p>May you build a career that brings you joy, purpose, and financial stability.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">4</div>
+                    <div class="wish-content">
+                        <h4>May you make lifelong friends</h4>
+                        <p>May you build meaningful friendships that support and inspire you throughout your life.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">5</div>
+                    <div class="wish-content">
+                        <h4>May you learn and grow</h4>
+                        <p>May you embrace every opportunity to learn, whether through formal education or life experiences.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">6</div>
+                    <div class="wish-content">
+                        <h4>May you prioritize self-care</h4>
+                        <p>May you learn to take care of your mental, physical, and emotional well-being.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">7</div>
+                    <div class="wish-content">
+                        <h4>May you find balance</h4>
+                        <p>May you find the perfect balance between school, play, relationships, and personal time.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">8</div>
+                    <div class="wish-content">
+                        <h4>May you be financially wise</h4>
+                        <p>May you develop good financial habits that bring you security and freedom.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">9</div>
+                    <div class="wish-content">
+                        <h4>May you embrace change</h4>
+                        <p>May you welcome change as an opportunity for growth and new beginnings.</p>
+                    </div>
+                </div>
+                
+                <div class="wish-item">
+                    <div class="wish-number">10</div>
+                    <div class="wish-content">
+                        <h4>May you stay true to yourself</h4>
+                        <p>May you always remember who you are and stay true to your values and dreams.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="show-more-container">
+                <button id="show-more-wishes" class="btn secondary-btn">
+                    <i class="fas fa-chevron-down"></i> Show More Wishes
+                </button>
+            </div>
+        </section>
+
+        <section class="personal-wish-section">
+            <div class="wish-form-card">
+                <div class="section-title">
+                    <h3>Make Your Own Birthday Wish</h3>
+                    <p>What do you wish for in your 20s? Write it down and make it special!</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="personal-wish"><i class="fas fa-star"></i> Your 20th Birthday Wish:</label>
+                    <textarea id="personal-wish" placeholder="What are your dreams for your 20s? What adventures do you want to have? What do you hope to achieve? Write it all here..."></textarea>
+                </div>
+                
+                <button id="save-personal-wish-btn" class="btn">
+                    <i class="fas fa-wishbone"></i> Make Your Birthday Wish!
+                </button>
+                
+                <div id="wish-confirmation" class="confirmation-message"></div>
+                
+                <div class="saved-wishes">
+                    <h4><i class="fas fa-history"></i> Your Saved Wishes</h4>
+                    <div id="saved-wishes-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p style="font-size: 1.3rem; margin-bottom: 20px;">May all your wishes for your 20s come true</p>
+            <div class="footer-nav">
+                <a href="main.html">Home</a> | 
+                <a href="memories.html">Memories</a> | 
+                <a href="wishes.html">Wishes</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.9rem; color: #999;">© <span id="current-year"></span> Sanelisiwe | January 6, 2006 - Forever</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Wishes page specific JavaScript
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Check authentication
+        if (!localStorage.getItem('birthdayAuthenticated')) {
+            window.location.href = 'index.html';
+        }
+        
+        // Logout functionality
+        document.getElementById('logout-button').addEventListener('click', function() {
+            if (confirm("Are you sure you want to logout from your birthday celebration?")) {
+                localStorage.removeItem('birthdayAuthenticated');
+                window.location.href = 'index.html';
+            }
+        });
+        
+        // Wish generator
+        const wishes = [
+            "May your 20s be filled with incredible adventures and new discoveries!",
+            "Wishing you success in every dream you pursue this decade!",
+            "May you find happiness in both big moments and small everyday joys!",
+            "Here's to lifelong learning and personal growth in your 20s!",
+            "May you build meaningful friendships that last a lifetime!",
+            "Wishing you the courage to take risks and chase what sets your soul on fire!",
+            "May you discover new passions and talents you never knew you had!",
+            "Here's to good health, positive energy, and endless vitality!",
+            "May you travel to places that take your breath away and expand your horizons!",
+            "Wishing you financial stability and the freedom to live life on your terms!",
+            "May you find balance between work, play, and self-care!",
+            "Here's to falling in love with yourself and the amazing woman you're becoming!",
+            "May you have the confidence to speak your truth and stand up for what you believe!",
+            "Wishing you resilience to overcome any challenges that come your way!",
+            "May your 20s be a time of self-discovery and defining who you truly are!",
+            "Here's to creating memories that you'll cherish for the rest of your life!",
+            "May you find a career path that brings you fulfillment and purpose!",
+            "Wishing you the wisdom to make great decisions and learn from the not-so-great ones!",
+            "May you always have a strong support system cheering you on!",
+            "Here's to a decade of becoming the best version of yourself!"
+        ];
+        
+        let currentWish = "";
+        
+        document.getElementById('generate-wish-btn').addEventListener('click', function() {
+            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+            currentWish = randomWish;
+            
+            document.getElementById('wish-text').textContent = randomWish;
+            document.getElementById('wish-display').style.display = 'block';
+            document.getElementById('save-wish-btn').style.display = 'inline-block';
+            
+            createConfetti(40);
+            
+            // Animate the wish display
+            const wishDisplay = document.getElementById('wish-display');
+            wishDisplay.style.animation = 'none';
+            setTimeout(() => {
+                wishDisplay.style.animation = 'fadeIn 0.8s ease-out';
+            }, 10);
+        });
+        
+        // Save generated wish
+        document.getElementById('save-wish-btn').addEventListener('click', function() {
+            if (!currentWish) return;
+            
+            const savedWishes = JSON.parse(localStorage.getItem('savedBirthdayWishes') || '[]');
+            savedWishes.push({
+                text: currentWish,
+                date: new Date().toLocaleDateString(),
+                type: 'generated'
+            });
+            localStorage.setItem('savedBirthdayWishes', JSON.stringify(savedWishes));
+            
+            // Show confirmation
+            const confirmation = document.createElement('div');
+            confirmation.innerHTML = '<i class="fas fa-check-circle"></i> Wish saved to your collection!';
+            confirmation.style.cssText = `
+                background: #d4edda;
+                color: #155724;
+                padding: 10px 15px;
+                border-radius: 8px;
+                margin-top: 15px;
+                animation: fadeIn 0.5s ease-out;
+            `;
+            
+            this.parentNode.insertBefore(confirmation, this.nextSibling);
+            
+            // Remove confirmation after 3 seconds
+            setTimeout(() => {
+                confirmation.remove();
+            }, 3000);
+            
+            // Update saved wishes list
+            loadSavedWishes();
+        });
+        
+        // Save personal wish
+        document.getElementById('save-personal-wish-btn').addEventListener('click', function() {
+            const wishText = document.getElementById('personal-wish').value;
+            const confirmation = document.getElementById('wish-confirmation');
+            
+            if (wishText.trim() === "") {
+                confirmation.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please write a wish first!';
+                confirmation.style.backgroundColor = "#ffeaea";
+                confirmation.style.color = "#e74c3c";
+                confirmation.style.display = "block";
+                return;
+            }
+            
+            const savedWishes = JSON.parse(localStorage.getItem('savedBirthdayWishes') || '[]');
+            savedWishes.push({
+                text: wishText,
+                date: new Date().toLocaleDateString(),
+                type: 'personal'
+            });
+            localStorage.setItem('savedBirthdayWishes', JSON.stringify(savedWishes));
+            
+            // Show confirmation
+            confirmation.innerHTML = '<i class="fas fa-check-circle"></i> Your wish has been saved!';
+            confirmation.style.backgroundColor = "#d4edda";
+            confirmation.style.color = "#155724";
+            confirmation.style.display = "block";
+            
+            // Clear textarea
+            document.getElementById('personal-wish').value = "";
+            
+            // Create confetti
+            createConfetti(50);
+            
+            // Update saved wishes list
+            loadSavedWishes();
+            
+            // Hide confirmation after 5 seconds
+            setTimeout(() => {
+                confirmation.style.display = "none";
+            }, 5000);
+        });
+        
+        // Load saved wishes
+        function loadSavedWishes() {
+            const savedWishes = JSON.parse(localStorage.getItem('savedBirthdayWishes') || '[]');
+            const savedWishesList = document.getElementById('saved-wishes-list');
+            
+            if (savedWishes.length === 0) {
+                savedWishesList.innerHTML = '<p class="no-wishes">No saved wishes yet. Make your first wish above!</p>';
+                return;
+            }
+            
+            savedWishesList.innerHTML = savedWishes.map((wish, index) => `
+                <div class="saved-wish-item">
+                    <div class="saved-wish-icon">
+                        ${wish.type === 'personal' ? '<i class="fas fa-user-circle"></i>' : '<i class="fas fa-magic"></i>'}
+                    </div>
+                    <div class="saved-wish-content">
+                        <p>${wish.text}</p>
+                        <div class="saved-wish-meta">
+                            <span><i class="far fa-calendar"></i> ${wish.date}</span>
+                            <span>${wish.type === 'personal' ? 'Personal Wish' : 'Generated Wish'}</span>
+                        </div>
+                    </div>
+                    <button class="delete-wish-btn" data-index="${index}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `).join('');
+            
+            // Add delete functionality
+            document.querySelectorAll('.delete-wish-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    const savedWishes = JSON.parse(localStorage.getItem('savedBirthdayWishes') || '[]');
+                    savedWishes.splice(index, 1);
+                    localStorage.setItem('savedBirthdayWishes', JSON.stringify(savedWishes));
+                    loadSavedWishes();
+                });
+            });
+        }
+        
+        // Show more wishes functionality
+        document.getElementById('show-more-wishes').addEventListener('click', function() {
+            const hiddenWishes = document.querySelectorAll('.wish-item:nth-child(n+11)');
+            hiddenWishes.forEach(wish => {
+                wish.style.display = 'flex';
+            });
+            this.style.display = 'none';
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-container')) {
+                navLinks.classList.remove('show');
+            }
+        });
+        
+        // Navigation active state
+        const currentPage = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        
+        // Load saved wishes on page load
+        loadSavedWishes();
+        
+        // Random confetti
+        setInterval(() => {
+            if (Math.random() > 0.8) {
+                createConfetti(5);
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
